@@ -20,15 +20,18 @@
       <div class="calculator__inputs">
         <div class="ibox">
           <label for="dayInput" class="calculator__inputs_label">DAY</label>
-          <input type="number" class="calculator__inputs_input" id="dayInput" placeholder="DD">
+          <input type="number" class="calculator__inputs_input" id="dayInput" placeholder="DD" maxlength="2">
+          <span class="calculator__inputs_error-msg"></span>
         </div>
         <div class="ibox">
           <label for="monthInput" class="calculator__inputs_label">MONTH</label>
-          <input type="number" class="calculator__inputs_input" id="monthInput" placeholder="MM">
+          <input type="number" class="calculator__inputs_input" id="monthInput" placeholder="MM" maxlength="2">
+          <span class="calculator__inputs_error-msg"></span>
         </div>
         <div class="ibox">
           <label for="yearInput" class="calculator__inputs_label">YEAR</label>
-          <input type="number" class="calculator__inputs_input" id="yearInput" placeholder="YYYY">
+          <input type="number" class="calculator__inputs_input" id="yearInput" placeholder="YYYY" maxlength="4">
+          <span class="calculator__inputs_error-msg"></span>
         </div>
       </div>
       <div class="calculator__button">

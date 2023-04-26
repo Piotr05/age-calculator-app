@@ -37,7 +37,7 @@ body {
     border-radius: 25px 25px 200px 25px;
     background-color: var(--white);
 }
-@media (min-width: 375px) and (max-width: 1439px) {
+@media (min-width: 375px) and (max-width: 1000px) {
     .calculator {
         width: 90%;
         height: auto;
@@ -80,7 +80,7 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
-@media (min-width: 375px) and (max-width: 1439px) {
+@media (min-width: 375px) and (max-width: 1000px) {
     .ibox {
         width: 33.33%;
         padding: 5px;
@@ -139,7 +139,7 @@ input::-webkit-inner-spin-button {
     left: 0;
     top: 50%;
 }
-@media (min-width: 375px) and (max-width: 1439px) {
+@media (min-width: 375px) and (max-width: 1000px) {
     .calculator__button {
         justify-content: center;
         margin: 20px 0;
@@ -169,7 +169,7 @@ input::-webkit-inner-spin-button {
 .calculator__output_number {
     color: var(--purple);
 }
-@media (min-width: 375px) and (max-width: 1439px) {
+@media (min-width: 375px) and (max-width: 1000px) {
     .calculator__output_output {
         font-size: 50px;
     }

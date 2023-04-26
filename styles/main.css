@@ -37,6 +37,14 @@ body {
     border-radius: 25px 25px 200px 25px;
     background-color: var(--white);
 }
+@media (min-width: 375px) and (max-width: 1439px) {
+    .calculator {
+        width: 90%;
+        height: auto;
+        padding: 30px;
+        border-radius: 25px 25px 100px 25px;
+    }
+}
 /* calculator inputs */
 .calculator__inputs {
     display: flex;
@@ -44,6 +52,7 @@ body {
 .ibox {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 .calculator__inputs_input {
     width: 120px;
@@ -71,6 +80,21 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
+@media (min-width: 375px) and (max-width: 1439px) {
+    .ibox {
+        width: 33.33%;
+        padding: 5px;
+    }
+    .ibox:first-child {
+        padding-left: 0;
+    }
+    .ibox:last-child {
+        padding-right: 0;
+    }
+    .calculator__inputs_input {
+        width: 100%;
+    }
+}
 /* incorrect input */
 .calculator__inputs_input.calculator__inputs_input--incorrect {
     border: 1px solid var(--lightRed);
@@ -94,18 +118,12 @@ input::-webkit-inner-spin-button {
     justify-content: end;
     position: relative;
 }
-.calculator__button_line {
-    width: 100%;
-    height: 1px;
-    background-color: var(--lightGrey);
-}
 .calculator__button_btn {
     width: 60px;
     height: 60px;
     background-color: var(--purple);
     border-radius: 100%;
     border: none;
-    z-index: 2;
 }
 .calculator__button_btn:hover {
     cursor: pointer;
@@ -120,7 +138,25 @@ input::-webkit-inner-spin-button {
     position: absolute;
     left: 0;
     top: 50%;
-    z-index: 0;
+}
+@media (min-width: 375px) and (max-width: 1439px) {
+    .calculator__button {
+        justify-content: center;
+        margin: 20px 0;
+    }
+    .calculator__button_btn::before {
+        width: calc(50% - 30px);
+    }
+    .calculator__button_btn::after {
+        content: '';
+        display: block;
+        width: calc(50% - 30px);
+        height: 1px;
+        background-color: var(--lightGrey);
+        position: absolute;
+        right: 0;
+        top: 50%;
+    }
 }
 /* calculator output */
 .calculator__output_output {
@@ -132,4 +168,9 @@ input::-webkit-inner-spin-button {
 }
 .calculator__output_number {
     color: var(--purple);
+}
+@media (min-width: 375px) and (max-width: 1439px) {
+    .calculator__output_output {
+        font-size: 50px;
+    }
 }
